@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <input type="button" id="b" value="Flow Event">
+        <script>
+            var btn=document.getElementById("b");
+            b.onclick=function(event){
+                alert(event.type);
+                event.stopPropagation();//for other browser
+               //window.event.cancelBubble=true;(IE event)
+            };
+            document.body.onclick=function(event){
+                alert("Body clicked");
+            };
+        </script>
+    </body>
+</html>

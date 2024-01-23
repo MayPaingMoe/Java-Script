@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="EventUtil.js"></script>
+    </head>
+    <body>
+        <div id="myDiv">Right click or Ctrl+Click me to get a custom context menu.
+            Click anyWhere else to get the  default contex menu.</div>
+            <ul id="myMenu" style="visibility: hidden;position:absolute;background-color: gray;">
+                <li><a href="www.nczonline.net">Nicholas' site</a></li>
+                <li><a href="www.wrox.com">Wrox site</a></li>
+                <li><a href="ww.yahoo.com">Yahoo!</a></li>
+            </ul>
+            <script>
+                EventUtil.addHandler(window,"load",function(event){
+                    var div=document.getElementById("myDiv");
+                    EventUtil.addHandler(div,"contextmenu",function(event){
+                        event=EventUtil.getEvent(event);
+                        EventUtil.preventDefault(event);
+                        var menu=document.getElementById("myMenu");
+                        menu.style.visibility="visible";
+                        menu.style.left=event.clientX+"px";
+                        menu.style.top=event.clientY+"px";
+                    });
+                    EventUtil.addHandler(document,"click",function(event){
+                        document.getElementById("myMenu").style.visibility="hidden";
+                    });
+                });
+            </script>
+    </body>
+</html>

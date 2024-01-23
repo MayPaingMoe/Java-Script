@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <input type="button" id="b" value="Flow Event">
+        <script>
+            var btn=document.getElementById("b");
+            b.onclick=function(event){
+                alert(event.eventPhase);};
+                document.body.addEventListener("click",function(event){
+                    alert(event.eventPhase); },true);//if false 2 and 2 and 3
+                document.body.onclick=function(event){
+                    alert(event.eventPhase);
+                };
+                </script>
+                </body>
+                </html>

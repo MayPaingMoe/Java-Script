@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script scr="EventUtil.js"></script>
+    </head>
+    <body>
+        <script>
+        EventUtil. addHandler(window,"beforunload",function(event){
+            event.EventUtil.getEvent(event);
+            var message="Are You Sure?";
+            //for morzila
+            //event.returnValue=message;
+            return message;
+        });
+    </script>
+    </body>
+</html>

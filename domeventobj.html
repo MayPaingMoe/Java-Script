@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <input type="button" id="myBtn" value="Add Event">
+        <script type="text/javascript">
+            var btn=document.getElementById("myBtn");
+            btn.onclick=function(Event){
+                alert(event.type);
+            };
+            btn.addEventListener("click",function(event){alert("Hello");},false);
+     </script>
+    </body>
+</html>

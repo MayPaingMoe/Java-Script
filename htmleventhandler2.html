@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div id="myDiv">Hello</div>
+        <input type="button" value="Cancel" id='myBtn'>
+        <script>
+            var btn=document.getElementById("myDiv");
+            btn.onclick=function(){
+               alert(this.id);
+            };
+            btn.onmouseout=function(){
+               alert("Second year");
+            };
+            var re=document.getElementById('myBtn');
+            re.onclick=function(){
+                btn.onclick=null;
+                btn.onmouseout=null;
+            };
+
+        </script>
+    </body>
+</html>

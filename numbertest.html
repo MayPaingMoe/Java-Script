@@ -1,0 +1,24 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form name="form" action="Mouseoverout.html" method="post" onsubmit="return cal()">
+        Number:<input type="text" id="num" name="num"><span id="text"></span><br>
+        <input type="submit" id="submit" value="Submit!" onclick="cal()">
+    </form>
+    <script>
+        function cal(){
+            var a=document.form.num.value;
+            if(a>0 && a<10){
+                return true;
+            }
+            else{
+                document.getElementById("text").innerHTML="Enter number between 1 and 10!";
+                return false;
+
+            }
+        }
+    </script>
+    </body>
+</html>

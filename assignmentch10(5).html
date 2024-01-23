@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #para {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <p id="para">Some text change color.</p>
+  <button onclick="changeColor('blue')">Blue</button>
+  <button onclick="changeColor('red')">Red</button>
+
+  <script>
+    function changeColor(color) {
+      var para = document.getElementById('para');
+      para.style.color = color;
+    }
+  </script>
+</body>
+</html>

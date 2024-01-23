@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <a href="domeventobj1.html" id="link">Home</a>
+        <script>
+            var links=document.getElementById("link");
+
+            links.onclick=function(event){
+                event.preventDefault();
+                 //window.event.returnValue=false;(IE event object)
+            };
+        </script>
+    </body>
+</html>

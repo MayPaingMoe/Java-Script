@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<body>
+  <h2>Shopping List</h2>
+  <button onclick="addItem()">Add Items!</button>
+  <ol id="itemList">
+  </ol>
+
+  <script>
+    function addItem() {
+      var list = document.getElementById('itemList');
+      var items = ['Book', 'Pencil', 'Eraser'];
+
+      var fragment = document.createDocumentFragment();
+      for (var i = 0; i < items.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.appendChild(document.createTextNode(items[i]));
+        fragment.appendChild(listItem);
+      }
+      list.appendChild(fragment);
+    }
+  </script>
+</body>
+</html>

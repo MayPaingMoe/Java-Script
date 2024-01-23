@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <input type="button" value="Cancel Hello" onclick="cancelHello()">
+
+        <script>
+//function sayhello(){
+ //   alert("Hello JavaScript");
+//}
+//var a=setTimeout(sayhello,5000);
+ 
+//function cancelHello(){
+  //  var b=setTimeout(sayhello,5000);
+//clearTimeout(b);
+//}
+
+function sayhello(){
+    alert("Hello");
+    
+}
+var a=setInterval(sayhello,5000);
+
+function cancelHello(){
+     clearInterval(a);
+}
+
+
+        </script>
+    </body>
+</html>
